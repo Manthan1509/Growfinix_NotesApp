@@ -14,7 +14,7 @@ export default function AuthPage() {
   const handleAuth = async (e) => {
     e.preventDefault();
     try {
-      await axios.post(`/auth/${mode}`, { email, password });
+      await axios.post(`/api/auth/${mode}`, { email, password });
       setUser({ email });
       navigate("/notes");
     } catch (err) {
