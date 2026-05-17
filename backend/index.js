@@ -11,7 +11,7 @@ mongoose.connect(process.env.MONGODB_URI, {})
   .catch(err => console.log(err));
 
 app.use(cors({
-  origin: 'http://localhost:5173', // Vite default port
+  origin: process.env.CLIENT_URL,
   credentials: true
 }));
 app.use(express.json());
